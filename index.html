@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skyrise Media | Meta Ads for Estate Agents in Northern Ireland</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --bg-start: #050B18;
+      --bg-end: #0A0A14;
+      --blue: #3B82F6;
+      --blue-dark: #2563EB;
+      --purple: #7C3AED;
+      --purple-dark: #6D28D9;
+      --purple-mid: #5B21B6;
+      --text-primary: #FFFFFF;
+      --text-secondary: #94A3B8;
+      --card-bg: rgba(255,255,255,0.04);
+      --card-border: rgba(255,255,255,0.08);
+      --accent-gradient: linear-gradient(135deg, #3B82F6, #5B21B6, #7C3AED);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(160deg, var(--bg-start) 0%, var(--bg-end) 100%);
+      color: var(--text-primary);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── BACKGROUND ORBS ── */
+    .orb-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.18;
+    }
+    .orb-blue {
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, #3B82F6, transparent 70%);
+      top: -200px; left: -200px;
+      animation: driftBlue 18s ease-in-out infinite alternate;
+    }
+    .orb-purple {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, #7C3AED, transparent 70%);
+      bottom: -100px; right: -150px;
+      animation: driftPurple 22s ease-in-out infinite alternate;
+    }
+    @keyframes driftBlue {
+      0%   { transform: translate(0, 0); }
+      50%  { transform: translate(120px, 80px); }
+      100% { transform: translate(60px, 160px); }
+    }
+    @keyframes driftPurple {
+      0%   { transform: translate(0, 0); }
+      50%  { transform: translate(-100px, -60px); }
+      100% { transform: translate(-50px, -130px); }
+    }
+
+    /* ── LAYOUT ── */
+    section { position: relative; z-index: 1; padding: 96px 24px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    /* ── NAVBAR ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      height: 72px;
+      background: rgba(5, 11, 24, 0.82);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .nav-brand img {
+      height: 60px;... (5 MB left)
